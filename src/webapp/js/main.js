@@ -23,6 +23,8 @@ function connect(){
    aCmd est une chaine de charactères */
  
 function sendCMD(aCmd){
-  /* TODO */
+  if (con.readyState == 1) {
+    con.send(aCmd);
+}
 
 }
