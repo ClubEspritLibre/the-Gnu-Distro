@@ -2,6 +2,7 @@
 
 var connected = false      // état de la connection 
 var server = "localhost"   // l'adresse du serveur
+var port = 9999; // Le port a utiliser
 var socket;
 
 
@@ -10,6 +11,22 @@ var socket;
 
 function connect(){
   /* TODO */
+  
+  socket = new WebSocket("ws://"+server+":"+port);
+  
+  socket.onopen = function(evt) {
+    connected = true;
+  };
+  
+  socket.onclose = function(evt) {
+    connected = false;
+  };
+  socket.onmessage = function(evt) {
+    
+  };
+  socket.onerror = function(evt) {
+    
+  };
     
 }
 
@@ -25,4 +42,10 @@ function connect(){
 function sendCMD(aCmd){
   /* TODO */
 
+}
+
+
+
+function closeConnection(){
+  socket.close();
 }
