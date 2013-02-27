@@ -23,9 +23,8 @@ function connect(){
    aCmd est une chaine de charactères */
  
 function sendCMD(aCmd){
-// sachant con et la variavble websocket qu'on va créer
-  if (con.readyState == 1) { 
-    con.send(aCmd);
+  if (socket.readyState == 1) { 
+    socket.send(aCmd);
 }
 
 }
