@@ -1,5 +1,6 @@
 import os
+import getpass
 
 def copyDistribution(dist):
-  target="/media/asma/"+os.listdir("/media/asma")[0]
+  target="/media/"+getpass.getuser()+"/"+os.listdir("/media/"+getpass.getuser()+"/")[0]
   
