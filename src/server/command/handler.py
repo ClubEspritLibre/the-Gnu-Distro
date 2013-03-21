@@ -5,7 +5,7 @@ class Handler():
     self.stream = ''
 
   def onReceive(self, aStream):
-    self.stream = ''
+    self.stream = aStream
   # TODO
     return None, 0
 
