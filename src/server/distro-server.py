@@ -1,5 +1,6 @@
 #!/usr/python
-
+# -*- coding: utf-8 -*-
+# Type d'encodage du fichier
 
 # Attention /!\ : 
 # Python est très stricte quand il s'agit d'indentation, 
@@ -8,6 +9,4 @@
 # 2 Espaces pour un niveau d'indentation.
 
 
-# Type d'encodage du fichier : 
 
-# -*- coding: utf-8 -*-
