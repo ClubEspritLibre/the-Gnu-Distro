@@ -1,5 +1,6 @@
 #!/usr/python
-
+# -*- coding: utf-8 -*-
+# Type d'encodage du fichier
 
 # Attention /!\ : 
 # Python est très stricte quand il s'agit d'indentation, 
@@ -8,6 +9,12 @@
 # 2 Espaces pour un niveau d'indentation.
 
 
-# Type d'encodage du fichier : 
+from simpleWSpy.server import WebSocketServer
+from command.handler import Handler
 
-# -*- coding: utf-8 -*-
+
+if __name__ == '__main__' :
+  handler = Handler()
+  ws = WebSocketServer.WebSocket(('localhost', 9999))
+  ws.serve_forever(handler)
+
