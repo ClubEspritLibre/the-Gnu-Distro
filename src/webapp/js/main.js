@@ -40,7 +40,9 @@ function connect(){
    aCmd est une chaine de charactères */
  
 function sendCMD(aCmd){
-  /* TODO */
+  if (socket.readyState == 1) { 
+    socket.send(aCmd);
+}
 
 }
 
