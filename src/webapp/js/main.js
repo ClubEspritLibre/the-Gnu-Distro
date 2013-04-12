@@ -6,11 +6,6 @@ var port = 9999;
 // Le port a utiliser
 var socket;
 
-//Déclaration des boutons
-var ubuntu = $("#ubuntu");
-var fedora = $("#fedora");
-var mint = $("#mint");
-
 // La fonction connect permet d'initialiser la connexion à travers
 // la variable sokcet déclaré plus haut.
 
@@ -56,9 +51,9 @@ function closeConnection() {
 
 $(document).ready(function() {
 
-	//connect();
+	connect();
 
-	$(ubuntu).click(function() {
+	$("#ubuntu").click(function() {
 
 		if (install == "COPY") {
 			sendCMD("COPY:UBUNTU");
@@ -68,7 +63,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$(fedora).click(function() {
+	$("#fedora").click(function() {
 
 		if (install == "COPY") {
 			sendCMD("COPY:FEDORA");
@@ -78,7 +73,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$(mint).click(function() {
+	$("#mint").click(function() {
 
 		if (install == "COPY") {
 			sendCMD("COPY:MINT");
