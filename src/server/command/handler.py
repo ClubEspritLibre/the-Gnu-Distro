@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from copy, boot import *
+from copy import *
+from boot import *
 
 class Handler():
   def __init__(self):
@@ -31,4 +32,4 @@ class Handler():
 
 
 
-DISTROS['UBUNTU':'ubuntu.iso', 'FEDORA':'fedora.iso', 'MINT':'mint.iso']
+DISTROS = {'UBUNTU':'ubuntu.iso', 'FEDORA':'fedora.iso', 'MINT':'mint.iso'}
