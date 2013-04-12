@@ -1,0 +1,218 @@
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+
+/*-------------------------
+	General Styles
+--------------------------*/
+
+
+html{
+	background: url('../img/bg_tile.jpg') #18222b;
+}
+
+body{
+	color:#fcfcfc;
+	font:14px/1.3 'Segoe UI',Arial, sans-serif;
+	height: 100%;
+	background:url('../img/bg_center.jpg') center 240px no-repeat;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+
+/*----------------------------
+	Headers & Footers
+-----------------------------*/
+
+
+header{
+	background:url('../img/header.png') repeat-x;
+	display: block;
+	height: 170px;
+	padding: 10px;
+}
+
+h1{
+	background:url('../img/logo.png') no-repeat center center;
+	height: 80px;
+	margin: 75px auto;
+	overflow: hidden;
+	text-align: center;
+	text-indent: -99999px;
+}
+
+
+
+/*----------------------------
+	Green filter bar
+-----------------------------*/
+
+
+#filter {
+	background: url("../img/bar.png") repeat-x 0 -94px;
+	display: block;
+	height: 39px;
+	margin: 40px auto;
+	position: relative;
+	width: 600px;
+	padding: 10px;
+	text-align:center;
+	font-family: Georgia, Serif;
+	font-size: 18px;
+	
+	-moz-box-shadow:0 4px 4px #000;
+	-webkit-box-shadow:0 4px 4px #000;
+	box-shadow:0 4px 4px #000;
+}
+
+#filter:before, #filter:after {
+	background: url("../img/bar.png") no-repeat;
+	height: 43px;
+	position: absolute;
+	top: 0;
+	width: 78px;
+	content: '';
+	
+	-moz-box-shadow:0 2px 0 rgba(0,0,0,0.4);
+	-webkit-box-shadow:0 2px 0 rgba(0,0,0,0.4);
+	box-shadow:0 2px 0 rgba(0,0,0,0.4);
+}
+
+#filter:before {
+	background-position: 0 -47px;
+	left: -78px;
+}
+
+#filter:after {
+	background-position: 0 0;
+	right: -78px;
+}
+
+#filter a{
+	color: #FFFFFF;
+	display: inline-block;
+	height: 39px;
+	line-height: 37px;
+	padding: 0 15px;
+	text-shadow:1px 1px 1px #315218;
+}
+
+#filter a:hover{
+	text-decoration:none;
+}
+
+#filter a.active{
+	background: url("../img/bar.png") repeat-x 0 -138px;
+	box-shadow:	1px 0 0 rgba(255, 255, 255, 0.2),
+				-1px 0 0 rgba(255, 255, 255, 0.2),
+				1px 0 1px rgba(0,0,0,0.2) inset,
+				-1px 0 1px rgba(0,0,0,0.2) inset;
+}
+
+
+/*----------------------------
+	Content area
+-----------------------------*/
+
+
+#container{
+	display:block;
+	overflow:hidden;
+	width: 520px;
+	margin:0 auto;
+}
+.icon{
+	width: 128px;
+	height: 128px;
+	border-radius: 65px;
+
+
+}
+.icon:active{
+	width: 128px;
+	height: 128px;
+	border-radius: 65px;
+	-moz-box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
+}
+
+#container li{
+
+	float: left;
+	height: 128px;
+	list-style: none outside none;
+	margin: 20px;
+	position: relative;
+	width: 128px;
+	
+	
+
+}
+
+#container ul{
+	overflow:hidden;
+}
+
+#container ul.hidden{
+	display:none;
+}
+
+
+/*----------------------------
+	The Footer
+-----------------------------*/
+
+
+footer{
+	display:block;
+	background-color:#13181d;
+	position:fixed;
+	width:100%;
+	height:50px;
+	bottom:0;
+	left:0;
+	z-index: 100000;
+}
+
+footer h2{
+	font-size:20px;
+	font-weight:normal;
+	left:50%;
+	margin-left:-400px;
+	padding:22px 0;
+	position:absolute;
+	width:400px;
+	color:#eee;
+}
+
+footer a.tzine,a.tzine:visited{
+	background:url("../img/tzine.png") no-repeat right top;
+	border:none;
+	text-decoration:none;
+	color:#FCFCFC;
+	font-size:12px;
+	height:70px;
+	left:50%;
+	line-height:31px;
+	margin:23px 0 0 110px;
+	position:absolute;
+	top:0;
+	width:290px;
+}
