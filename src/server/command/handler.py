@@ -13,11 +13,17 @@ class Handler():
     if(not self.extractArgs()):
       return None, 0
 
-      if(self.args[0] is 'COPY'):
-        copy(getDistFileName())
+    if(self.args[0] == 'COPY'):
+      if(copyDistribution(self.getDistFileName()))
+        return "Copie terminée", True
+      else:
+        return "Erreur lors de la copie", True
 
-      elif(self.args[0] is 'BOOT'):
-        boot(getDistFileName())
+    elif(self.args[0] == 'BOOT'):
+      if(bootDistribution(self.getDistFileName()))
+        return "Opération terminée avec succés", True
+      else:
+        return "Erreur lors de la création de flash bootable ! ", True
       
   # TODO
     return None, 0
@@ -27,7 +33,7 @@ class Handler():
     return True
 
   def getDistFileName(self):
-    return DISTRO[self.args[1]]
+    return DISTROS[self.args[1]]
 
 
 
