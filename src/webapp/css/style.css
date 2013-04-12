@@ -76,8 +76,8 @@ h1{
 	font-family: Georgia, Serif;
 	font-size: 18px;
 	
-	-moz-box-shadow:0 4px 4px #000;
-	-webkit-box-shadow:0 4px 4px #000;
+	box-shadow:0 4px 4px #000;
+	box-shadow:0 4px 4px #000;
 	box-shadow:0 4px 4px #000;
 }
 
@@ -89,8 +89,8 @@ h1{
 	width: 78px;
 	content: '';
 	
-	-moz-box-shadow:0 2px 0 rgba(0,0,0,0.4);
-	-webkit-box-shadow:0 2px 0 rgba(0,0,0,0.4);
+	box-shadow:0 2px 0 rgba(0,0,0,0.4);
+	box-shadow:0 2px 0 rgba(0,0,0,0.4);
 	box-shadow:0 2px 0 rgba(0,0,0,0.4);
 }
 
@@ -148,8 +148,8 @@ h1{
 	width: 128px;
 	height: 128px;
 	border-radius: 65px;
-	-moz-box-shadow: 0 0 5px #000;
-	-webkit-box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
 	box-shadow: 0 0 5px #000;
 }
 

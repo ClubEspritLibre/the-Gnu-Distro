@@ -54,26 +54,41 @@ function closeConnection() {
 	socket.close();
 }
 
-
 $(document).ready(function() {
-	
-	connect();
-	
+
+	//connect();
+
 	$(ubuntu).click(function() {
-		if (install == "COPY"){	sendCMD("COPY:UBUNTU");}
-		if (install == "BOOT"){	sendCMD("BOOT:UBUNTU");}
+
+		if (install == "COPY") {
+			sendCMD("COPY:UBUNTU");
+		}
+		if (install == "BOOT") {
+			sendCMD("BOOT:UBUNTU");
+		}
 	});
 
 	$(fedora).click(function() {
-		if (install == "COPY"){	sendCMD("COPY:FEDORA");}
-		if (install == "BOOT"){	sendCMD("BOOT:FEDORA");}
+
+		if (install == "COPY") {
+			sendCMD("COPY:FEDORA");
+		}
+		if (install == "BOOT") {
+			sendCMD("BOOT:FEDORA");
+		}
 	});
 
 	$(mint).click(function() {
-		if (install == "COPY"){	sendCMD("COPY:MINT");}
-		if (install == "BOOT"){	sendCMD("BOOT:MINT");}
+
+		if (install == "COPY") {
+			sendCMD("COPY:MINT");
+		}
+		if (install == "BOOT") {
+			sendCMD("BOOT:MINT");
+		}
+
 	});
-	
-	closeConnection();
+
+	//closeConnection();
 });
 
