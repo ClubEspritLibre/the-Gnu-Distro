@@ -22,7 +22,7 @@ function connect() {
 		connected = false;
 	};
 	socket.onmessage = function(evt) {
-
+    alert(evt.data);
 	};
 	socket.onerror = function(evt) {
 
@@ -49,39 +49,33 @@ function closeConnection() {
 	socket.close();
 }
 
+
 $(document).ready(function() {
 
 	connect();
 
-	$("#ubuntu").click(function() {
-
-		if (install == "COPY") {
-			sendCMD("COPY:UBUNTU");
-		}
-		if (install == "BOOT") {
-			sendCMD("BOOT:UBUNTU");
-		}
+	$("#copyu").click(function() {
+		sendCMD("COPY:UBUNTU");
 	});
 
-	$("#fedora").click(function() {
-
-		if (install == "COPY") {
-			sendCMD("COPY:FEDORA");
-		}
-		if (install == "BOOT") {
-			sendCMD("BOOT:FEDORA");
-		}
+	$("#copyf").click(function() {
+		sendCMD("COPY:FEDORA");
 	});
 
-	$("#mint").click(function() {
+	$("#copym").click(function() {
+		sendCMD("COPY:MINT");
+	});
 
-		if (install == "COPY") {
-			sendCMD("COPY:MINT");
-		}
-		if (install == "BOOT") {
-			sendCMD("BOOT:MINT");
-		}
+	$("#bootu").click(function() {
+		sendCMD("BOOT:UBUNTU");
+	});
 
+	$("#bootf").click(function() {
+		sendCMD("BOOT:FEDORA");
+	});
+
+	$("#bootm").click(function() {
+		sendCMD("BOOT:MINT");
 	});
 
 	//closeConnection();
