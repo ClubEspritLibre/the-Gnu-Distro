@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os,shutil
 
 def copyDistribution(dist):
@@ -7,7 +8,10 @@ def copyDistribution(dist):
     base=homedir+"/.the-gnu-distro/distribution/"+dist
     result= os.popen("udisks --show-info /dev/disk/by-id/usb*part1|grep -i 'mount paths'").read()
     target=result[result.find("/"):len(result)-1]
-    shutil.copy(base,target)
-    return True
+    try:
+      shutil.copy(base,target)
+    except IOError, e:
+      return "Erreur lors de la copie : %s" %e
+    return "Copie terminée"
   else:
-    return False
+    return None

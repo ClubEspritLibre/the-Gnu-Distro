@@ -6,11 +6,6 @@ var port = 9999;
 // Le port a utiliser
 var socket;
 
-//Déclaration des boutons
-var ubuntu = $("#ubuntu");
-var fedora = $("#fedora");
-var mint = $("#mint");
-
 // La fonction connect permet d'initialiser la connexion à travers
 // la variable sokcet déclaré plus haut.
 
@@ -27,7 +22,7 @@ function connect() {
 		connected = false;
 	};
 	socket.onmessage = function(evt) {
-
+    alert(evt.data);
 	};
 	socket.onerror = function(evt) {
 
@@ -54,39 +49,33 @@ function closeConnection() {
 	socket.close();
 }
 
+
 $(document).ready(function() {
 
-	//connect();
+	connect();
 
-	$(ubuntu).click(function() {
-
-		if (install == "COPY") {
-			sendCMD("COPY:UBUNTU");
-		}
-		if (install == "BOOT") {
-			sendCMD("BOOT:UBUNTU");
-		}
+	$("#copyu").click(function() {
+		sendCMD("COPY:UBUNTU");
 	});
 
-	$(fedora).click(function() {
-
-		if (install == "COPY") {
-			sendCMD("COPY:FEDORA");
-		}
-		if (install == "BOOT") {
-			sendCMD("BOOT:FEDORA");
-		}
+	$("#copyf").click(function() {
+		sendCMD("COPY:FEDORA");
 	});
 
-	$(mint).click(function() {
+	$("#copym").click(function() {
+		sendCMD("COPY:MINT");
+	});
 
-		if (install == "COPY") {
-			sendCMD("COPY:MINT");
-		}
-		if (install == "BOOT") {
-			sendCMD("BOOT:MINT");
-		}
+	$("#bootu").click(function() {
+		sendCMD("BOOT:UBUNTU");
+	});
 
+	$("#bootf").click(function() {
+		sendCMD("BOOT:FEDORA");
+	});
+
+	$("#bootm").click(function() {
+		sendCMD("BOOT:MINT");
 	});
 
 	//closeConnection();
