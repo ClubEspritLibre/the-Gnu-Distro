@@ -14,13 +14,14 @@ class Handler():
       return None, 0
 
     if(self.args[0] == 'COPY'):
-      if(copyDistribution(self.getDistFileName()))
-        return "Copie terminée", True
+      res = copyDistribution(self.getDistFileName())
+      if(res is not None):
+        return res, True
       else:
         return "Erreur lors de la copie", True
 
     elif(self.args[0] == 'BOOT'):
-      if(bootDistribution(self.getDistFileName()))
+      if(bootDistribution(self.getDistFileName())):
         return "Opération terminée avec succés", True
       else:
         return "Erreur lors de la création de flash bootable ! ", True
