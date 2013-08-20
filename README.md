@@ -5,7 +5,7 @@ The Gnu Distro
 
 1. Install [simpleWS-python](https://github.com/rednaks/simpleWS-python).
     <pre>
-    $ git clone https://github.com/rednaks/simpleWS-python
+    $ git clone https://github.com/rednaks/simpleWS-python.git
     $ cd simpleWS-python
     # python setup.py install
     </pre>
