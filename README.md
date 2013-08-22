@@ -14,10 +14,9 @@ The Gnu Distro
      <pre>
      $ git clone https://github.com/ClubEspritLibre/the-Gnu-Distro.git
      </pre>
-  * Start the websocket server:
+  * Start the app:
      <pre>
      $ cd the-Gnu-Distro
-     $ python src/server/distro-server.py 
+     $ python start.py 
      </pre>
 
-3. Open up <code>the-Gnu-Distro/src/webapp/index.html </code>with your favorite web browser.
