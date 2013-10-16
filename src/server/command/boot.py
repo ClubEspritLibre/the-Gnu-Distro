@@ -1,8 +1,8 @@
 import os,shutil
-
+from utils import usbIsPresent
 def bootDistribution(dist):
-  usb = [f for f in os.listdir("/dev/disk/by-id/") if f.find("usb")!= -1 ]
-  if(len(usb)!=0):
+
+  if usbIsPresent() == True:
     homedir = os.environ['HOME']
     base=homedir+"/.the-gnu-distro/distribution/"+dist
     result= os.popen("udisks --show-info /dev/disk/by-id/usb*|grep -i 'device-file'").read()
