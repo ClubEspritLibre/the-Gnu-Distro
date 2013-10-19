@@ -21,7 +21,7 @@ class Handler():
         return "Erreur lors de la copie", True
 
     elif(self.args[0] == 'BOOT'):
-      if(bootDistribution(self.getDistFileName())):
+      if bootDistribution(self.getDistFileName()):
         return "Opération terminée avec succés", True
       else:
         return "Erreur lors de la création de flash bootable ! ", True
