@@ -1,218 +1,410 @@
-/*-------------------------
-	Simple reset
---------------------------*/
-
-
-*{
-	margin:0;
-	padding:0;
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
-
-/*-------------------------
-	General Styles
---------------------------*/
-
-
-html{
-	background: url('../img/bg_tile.jpg') #18222b;
+.container > header,
+.codrops-top,
+.container > section {
+	font-family: 'Lato', Arial, sans-serif;
 }
 
-body{
-	color:#fcfcfc;
-	font:14px/1.3 'Segoe UI',Arial, sans-serif;
-	height: 100%;
-	background:url('../img/bg_center.jpg') center 240px no-repeat;
-}
-
-a, a:visited {
-	text-decoration:none;
-	outline:none;
-	color:#54a6de;
-}
-
-a:hover{
-	text-decoration:underline;
-}
-
-
-/*----------------------------
-	Headers & Footers
------------------------------*/
-
-
-header{
-	background:url('../img/header.png') repeat-x;
-	display: block;
-	height: 170px;
-	padding: 10px;
-}
-
-h1{
-	background:url('../img/logo.png') no-repeat center center;
-	height: 80px;
-	margin: 75px auto;
-	overflow: hidden;
+.container > header {
+	margin: 0 auto;
+	padding: 2em;
 	text-align: center;
-	text-indent: -99999px;
+	background: rgba(0,0,0,0.01);
 }
 
+.container > header h1 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
 
-
-/*----------------------------
-	Green filter bar
------------------------------*/
-
-
-#filter {
-	background: url("../img/bar.png") repeat-x 0 -94px;
+.container > header span {
 	display: block;
-	height: 39px;
-	margin: 40px auto;
-	position: relative;
-	width: 600px;
-	padding: 10px;
-	text-align:center;
-	font-family: Georgia, Serif;
-	font-size: 18px;
-	
-	box-shadow:0 4px 4px #000;
-	box-shadow:0 4px 4px #000;
-	box-shadow:0 4px 4px #000;
+	font-size: 60%;
+	opacity: 0.7;
+	padding: 0 0 0.6em 0.1em;
 }
 
-#filter:before, #filter:after {
-	background: url("../img/bar.png") no-repeat;
-	height: 43px;
-	position: absolute;
-	top: 0;
-	width: 78px;
-	content: '';
-	
-	box-shadow:0 2px 0 rgba(0,0,0,0.4);
-	box-shadow:0 2px 0 rgba(0,0,0,0.4);
-	box-shadow:0 2px 0 rgba(0,0,0,0.4);
+/* To Navigation Style */
+.codrops-top {
+	background: #f06060;
+	background: rgba(255, 255, 255, 0.1);
+	text-transform: uppercase;
+	width: 100%;
+	font-size: 0.69em;
+	line-height: 2.2;
 }
 
-#filter:before {
-	background-position: 0 -47px;
-	left: -78px;
-}
-
-#filter:after {
-	background-position: 0 0;
-	right: -78px;
-}
-
-#filter a{
-	color: #FFFFFF;
+.codrops-top a {
+	text-decoration: none;
+	padding: 0 1em;
+	letter-spacing: 0.1em;
+	color: #fff;
 	display: inline-block;
-	height: 39px;
-	line-height: 37px;
-	padding: 0 15px;
-	text-shadow:1px 1px 1px #315218;
 }
 
-#filter a:hover{
-	text-decoration:none;
+.codrops-top a:hover {
+	background: rgba(255,255,255,0.95);
+	color: #777;
 }
 
-#filter a.active{
-	background: url("../img/bar.png") repeat-x 0 -138px;
-	box-shadow:	1px 0 0 rgba(255, 255, 255, 0.2),
-				-1px 0 0 rgba(255, 255, 255, 0.2),
-				1px 0 1px rgba(0,0,0,0.2) inset,
-				-1px 0 1px rgba(0,0,0,0.2) inset;
+.codrops-top span.right {
+	float: right;
 }
 
-
-/*----------------------------
-	Content area
------------------------------*/
-
-
-#container{
-	display:block;
-	overflow:hidden;
-	width: 520px;
-	margin:0 auto;
-}
-.icon{
-	width: 128px;
-	height: 128px;
-	border-radius: 65px;
-
-
-}
-.icon:active{
-	width: 128px;
-	height: 128px;
-	border-radius: 65px;
-	box-shadow: 0 0 5px #000;
-	box-shadow: 0 0 5px #000;
-	box-shadow: 0 0 5px #000;
-}
-
-#container li{
-
+.codrops-top span.right a {
 	float: left;
-	height: 128px;
-	list-style: none outside none;
-	margin: 20px;
+	display: block;
+}
+
+.codrops-icon:before {
+	font-family: 'codropsicons';
+	margin: 0 4px;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon-drop:before {
+	content: "\e001";
+}
+
+.codrops-icon-prev:before {
+	content: "\e004";
+}
+
+/* Demo Buttons Style */
+.codrops-demos {
+	padding-top: 1em;
+	font-size: 0.9em;
+}
+
+.codrops-demos a {
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0.7em 1.1em;
+	border: 3px solid #fff;
+	color: #fff;
+	font-weight: 700;
+}
+
+.codrops-demos a:hover,
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover {
+	opacity: 0.6;
+}
+
+.container > section {
+	padding: 2em;
+	font-size: 1.4em;
+	max-width: 50em;
+	margin: 0 auto;
+}
+
+.container > section p {
+	padding: 0.8em 0;
+	text-align: justify;
+	opacity: 0.5;
+	font-weight: 300;
+	line-height: 1.4;
+}
+
+@media screen and (max-width: 25em) {
+
+	.codrops-icon span {
+		display: none;
+	}
+
+}* {
 	position: relative;
-	width: 128px;
-	
-	
-
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-#container ul{
-	overflow:hidden;
+html,
+body {
+	height: 100%;
 }
 
-#container ul.hidden{
-	display:none;
+body {
+	background: #52be7f;
+	color: #fff;
+}
+
+.component {
+	position: relative;
+	margin-bottom: 3em;
+	height: 15em;
+	background: rgba(0,0,0,0.05);
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+.component > h2 {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 12em;
+	opacity: 0.1;
+	cursor: default;
+}
+
+.cn-button {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	z-index: 11;
+	margin-top: -2.25em;
+	margin-left: -2.25em;
+	padding-top: 0em;
+	width: 4.5em;
+	height: 4.5em;
+	border: none;
+	border-radius: 50%;
+	background: none;
+	background-color: #fff;
+	color: #52be7f;
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+}
+
+.csstransforms .cn-wrapper {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	z-index: 10;
+	margin-top: -13em;
+	margin-left: -13.5em;
+	width: 27em;
+	height: 27em;
+	border-radius: 50%;
+	background: transparent;
+	opacity: 0;
+	transition: all .3s ease 0.3s;
+	transform: scale(0.1);
+	pointer-events: none;
+	overflow: hidden;
+}
+
+/*cover to prevent extra space of anchors from being clickable*/
+.csstransforms .cn-wrapper:after{
+  content:".";
+  display:block;
+  font-size:2em;
+  width:6.2em;
+  height:6.2em;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.1em;
+  top:50%;
+  margin-top: -3.1em;
+  border-radius: 50%;
+  z-index:10;
+  color: transparent;
+}
+
+.csstransforms .opened-nav {
+	border-radius: 50%;
+	opacity: 1;
+	transition: all .3s ease;
+	transform: scale(1);
+	pointer-events: auto;
+}
+
+.csstransforms .cn-wrapper li {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	overflow: hidden;
+	margin-top: -1.3em;
+	margin-left: -10em;
+	width: 10em;
+	height: 10em;
+	font-size: 1.5em;
+	transition: all .3s ease;
+	transform: rotate(76deg) skew(60deg);
+	transform-origin: 100% 100%;
+	pointer-events: none;
+}
+
+.csstransforms .cn-wrapper li a {
+	position: absolute;
+	right: -7.25em;
+	bottom: -7.25em;
+	display: block;
+	width: 14.5em;
+	height: 14.5em;
+	border-radius: 50%;
+	background: #429a67;
+	background: radial-gradient(transparent 35%, #429a67 35%);
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.2em;
+	line-height: 2;
+	transform: skew(-60deg) rotate(-75deg) scale(1);
+	backface-visibility: hidden;
+	pointer-events: auto;
+}
+
+.csstransforms .cn-wrapper li a span {
+	position: relative;
+	top: 1.8em;
+	display: block;
+	font-size: .5em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.csstransforms .cn-wrapper li a:hover,
+.csstransforms .cn-wrapper li a:active,
+.csstransforms .cn-wrapper li a:focus {
+	background: radial-gradient(transparent 35%, #449e6a 35%);
+}
+
+.csstransforms .opened-nav li {
+	transition: all .3s ease .3s;
+}
+
+.csstransforms .opened-nav li:first-child {
+	transform: rotate(40deg) skew(60deg);
+}
+
+.csstransforms .opened-nav li:nth-child(2) {
+	transform: rotate(76deg) skew(60deg);
+}
+
+.csstransforms .opened-nav  li:nth-child(3) {
+	transform: rotate(111deg) skew(60deg);
 }
 
 
-/*----------------------------
-	The Footer
------------------------------*/
-
-
-footer{
-	display:block;
-	background-color:#13181d;
-	position:fixed;
-	width:100%;
-	height:50px;
-	bottom:0;
-	left:0;
-	z-index: 100000;
+.no-csstransforms .cn-wrapper {
+	overflow: hidden;
+	margin: 10em auto;
+	padding: .5em;
+	text-align: center;
 }
 
-footer h2{
-	font-size:20px;
-	font-weight:normal;
-	left:50%;
-	margin-left:-400px;
-	padding:22px 0;
-	position:absolute;
-	width:400px;
-	color:#eee;
+.no-csstransforms .cn-wrapper ul {
+	display: inline-block;
 }
 
-footer a.tzine,a.tzine:visited{
-	background:url("../img/tzine.png") no-repeat right top;
-	border:none;
-	text-decoration:none;
-	color:#FCFCFC;
-	font-size:12px;
-	height:70px;
-	left:50%;
-	line-height:31px;
-	margin:23px 0 0 110px;
-	position:absolute;
-	top:0;
-	width:290px;
+.no-csstransforms .cn-wrapper li {
+	float: left;
+	width: 5em;
+	height: 5em;
+	background-color: #fff;
+	text-align: center;
+	font-size: 1em;
+	line-height: 5em;
+}
+
+.no-csstransforms .cn-wrapper li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: inherit;
+	text-decoration: none;
+}
+
+.no-csstransforms .cn-wrapper li a:hover,
+.no-csstransforms .cn-wrapper li a:active,
+.no-csstransforms .cn-wrapper li a:focus {
+	background-color: #f8f8f8;
+}
+
+.no-csstransforms .cn-wrapper li.active a{
+	background-color: #6F325C;
+	color: #fff;
+}
+
+.no-csstransforms .cn-button {
+	display: none;
+}
+
+@media only screen and (max-width: 620px) {
+	.no-csstransforms li {
+		width: 4em;
+		height: 4em;
+		line-height: 4em;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.no-ccstransforms .cn-wrapper {
+		padding: .5em;
+	}
+
+	.no-csstransforms .cn-wrapper li {
+		width: 4em;
+		height: 4em;
+		font-size: .9em;
+		line-height: 4em;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.csstransforms .cn-wrapper {
+		font-size: .68em;
+	}
+
+	.cn-button {
+		font-size: 1em;
+	}
+}
+
+@media only screen and (max-width:420px) {
+	.no-csstransforms .cn-wrapper li {
+		width: 100%;
+		height: 3em;
+		line-height: 3em;
+	}
+}
+
+footer a.tzine, a.tzine:visited{ 
+  border: none;
+  text-decoration:none;
+  left:83%;
+  line-height:31px;
+  position: absolute;
+  top:0;
+  width:219px;
+  margin-top:150px;
+}
+
+.forkme {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  border: 0;
 }
