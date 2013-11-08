@@ -6,6 +6,7 @@ var port = 9999;
 // Le port a utiliser
 var socket;
 
+var distro = "";
 // La fonction connect permet d'initialiser la connexion à travers
 // la variable sokcet déclaré plus haut.
 
@@ -54,30 +55,33 @@ $(document).ready(function() {
 
 	connect();
 
-	$("#copyu").click(function() {
-		sendCMD("COPY:UBUNTU");
-	});
+  $("#debian").click(function() {
+    distro = "debian";
+    $(".ui.modal").modal('show');
+  });
 
-	$("#copyf").click(function() {
-		sendCMD("COPY:FEDORA");
-	});
+  $("#fedora").click(function() {
+    distro = "fedora";
+    $(".ui.modal").modal('show');
+  });
 
-	$("#copym").click(function() {
-		sendCMD("COPY:MINT");
-	});
+  $("#ubuntu").click(function() {
+    distro = "ubuntu";
+    $(".ui.modal").modal('show');
+  });
 
-	$("#bootu").click(function() {
-		sendCMD("BOOT:UBUNTU");
-	});
+  $("#boot").click(function() {
+    if(distro.length == 0)
+      return;
+    var cmd = "BOOT:"+distro.toUpperCase();
+    sendCMD(cmd);
+  });
 
-	$("#bootf").click(function() {
-		sendCMD("BOOT:FEDORA");
-	});
-
-	$("#bootm").click(function() {
-		sendCMD("BOOT:MINT");
-	});
-
-	//closeConnection();
+  $("#copy").click(function() {
+    if(distro.length == 0)
+      return;
+    var cmd = "COPY:"+distro.toUpperCase();
+    sendCMD(cmd);
+  });
 });
 

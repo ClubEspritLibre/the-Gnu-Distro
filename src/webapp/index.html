@@ -6,26 +6,43 @@
 		<script src="js/jquery.min.js" language="javascript"></script>
 		<script src="js/main.js" language="javascript"></script>
     <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/semantic.min.js" language="javascript"></script>
     <link rel="stylesheet" href="css/normalize.css"/>
 		<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/semantic.min.css"/>
 
 	</head>
 	<body>
 		<a class="forkme" href="https://github.com/ClubEspritLibre/the-Gnu-Distro"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+    <div class="ui basic modal">
+      <div class="header">
+        One step more
+      </div>
+      <div class="content">
+        Would you like to create a bootable usb drive or simply to copy the image ?
+      </div>
+      <div class="actions">
+        <div id="boot" class="ui button">
+          BOOTABLE
+        </div>
+        <div id="copy" class="ui button">
+          COPY
+        </div>
+      </div>
+    </div>
     <div class="container">
 		  <header>
 		  	<h1>The GNU Distro
           <span>Distribute and Conquer</span>
         </h1>
 		  </header>
-
       <div class="component">
         <button class="cn-button" id="cn-button">Touch Here</button>
         <div class="cn-wrapper" id="cn-wrapper">
           <ul>
-            <li><a href="#"><span>Debian</span></a></li>
-            <li><a href="#"><span>Fedora</span></a></li>
-            <li><a href="#"><span>Ubuntu</span></a></li>
+            <li><a id="debian" href="#"><span>Debian</span></a></li>
+            <li><a id="fedora" href="#"><span>Fedora</span></a></li>
+            <li><a id="ubuntu" href="#"><span>Ubuntu</span></a></li>
           </ul>
         </div>
       </div>
